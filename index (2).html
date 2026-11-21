@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장학성 | 콘텐츠 크리에이터 포트폴리오</title>
+<meta name="description" content="콘텐츠의 가능성을 기획하고, 기술로 구현하며, 사람들의 반응으로 증명하는 콘텐츠 크리에이터 장학성의 포트폴리오">
+<meta name="theme-color" content="#F4EFE6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="장학성 | 콘텐츠 크리에이터 포트폴리오">
+<meta property="og:description" content="빈 화면에서 시작해 마음에 닿는 장면을 만듭니다.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316130F'/%3E%3Ccircle cx='32' cy='33' r='15' fill='%23F2C230'/%3E%3C/svg%3E">
+<!-- 웹폰트(Pretendard). 불러오지 못해도 기기 기본 한글 글꼴로 자연스럽게 대체됩니다. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+<style>
+/* =========================================================
+   0. 디자인 토큰
+   ========================================================= */
+:root{
+  --paper:#F4EFE6;
+  --paper-2:#ECE5D8;
+  --card:#FBF8F2;
+  --ink:#16130F;
+  --ink-2:#4C463C;
+  --ink-3:#7F7768;
+  --line:rgba(22,19,15,.12);
+  --line-strong:rgba(22,19,15,.24);
+  --yellow:#F2C230;
+  --yellow-soft:#F6DB86;
+  --ochre:#8A5D00;
+  --night:#14110D;
+  --night-2:#1D1914;
+  --night-line:rgba(244,239,230,.13);
+  --ivory:#F4EFE6;
+  --ivory-2:rgba(244,239,230,.7);
+  --ivory-3:rgba(244,239,230,.5);
+  --radius:22px;
+  --header-h:72px;
+  --font:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Noto Sans CJK KR","Malgun Gothic",system-ui,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+}
+
+/* =========================================================
+   1. 기본
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.is-modal-open{overflow:hidden}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.7;
+  letter-spacing:-.01em;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{line-height:1.25;letter-spacing:-.035em}
+::selection{background:var(--yellow);color:var(--ink)}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:6px}
+.container{width:min(1200px, 100% - 48px);margin-inline:auto}
+.skip-link{position:absolute;left:12px;top:-80px;z-index:100;background:var(--ink);color:var(--ivory);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.skip-link:focus{top:12px}
+.serif-num{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+
+/* 섹션 머리 */
+.kicker{
+  display:flex;align-items:center;gap:12px;margin:0;
+  font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);
+}
+.kicker .serif-num{font-size:16px;color:var(--ink);text-transform:none}
+.kicker::after{content:"";width:44px;height:1px;background:currentColor;opacity:.45}
+
+/* 버튼 */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:0 26px;border-radius:999px;
+  border:1px solid var(--ink);background:transparent;color:var(--ink);
+  font-size:15px;font-weight:700;letter-spacing:-.01em;text-decoration:none;cursor:pointer;
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--ink);color:var(--ivory)}
+.btn-primary svg{color:var(--yellow)}
+.btn-primary:hover{background:#2C271F}
+.btn-line:hover{background:var(--ink);color:var(--ivory)}
+.btn-light{background:var(--ivory);border-color:var(--ivory);color:var(--ink)}
+.btn-light:hover{background:var(--yellow);border-color:var(--yellow)}
+.btn-line-light{border-color:rgba(244,239,230,.38);color:var(--ivory)}
+.btn-line-light:hover{border-color:var(--ivory);background:rgba(244,239,230,.08)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:14px}
+.link-btn{
+  border:0;background:none;padding:0;cursor:pointer;
+  font-size:13px;font-weight:700;color:var(--ink);
+  text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:2px;text-underline-offset:4px;
+}
+.link-btn:hover{color:var(--ochre)}
+
+/* =========================================================
+   2. 헤더 · 메뉴
+   ========================================================= */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(244,239,230,.86);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  backdrop-filter:blur(14px) saturate(1.15);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-dot{width:9px;height:9px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(242,194,48,.22)}
+.brand-name{font-size:17px;font-weight:800;letter-spacing:-.03em}
+.brand-sub{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-3)}
+.nav-list{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav-list a{position:relative;display:block;padding:8px 12px;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none}
+.nav-list a:hover{color:var(--ink)}
+.nav-list a[aria-current="true"]{color:var(--ink)}
+.nav-list a[aria-current="true"]::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;background:var(--yellow)}
+.menu-toggle{
+  display:none;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line-strong);background:transparent;cursor:pointer;
+}
+.menu-toggle svg{width:20px;height:20px}
+.menu-toggle .icon-close{display:none}
+.menu-toggle[aria-expanded="true"]{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.menu-toggle[aria-expanded="true"] .icon-open{display:none}
+.menu-toggle[aria-expanded="true"] .icon-close{display:block}
+
+@media (max-width:760px){
+  .menu-toggle{display:inline-flex}
+  .site-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    box-shadow:0 24px 40px -24px rgba(22,19,15,.3);
+    padding:6px 24px 20px;
+  }
+  .site-nav.is-open{display:block}
+  .no-js .site-nav{display:block;position:static;box-shadow:none;border:0;padding:0 0 12px}
+  .no-js .header-inner{height:auto;flex-wrap:wrap;padding-top:14px}
+  .nav-list{flex-direction:column;gap:0}
+  .nav-list li+li{border-top:1px solid var(--line)}
+  .nav-list a{padding:15px 0;font-size:18px;font-weight:700;color:var(--ink)}
+  .nav-list a[aria-current="true"]::after{left:auto;right:0;top:50%;bottom:auto;width:8px;height:8px;border-radius:50%;transform:translateY(-50%)}
+}
+
+/* =========================================================
+   3. 소개(히어로)
+   ========================================================= */
+.hero{
+  position:relative;
+  padding:56px 0 96px;
+  overflow:hidden; /* 구형 브라우저 대비 */
+  overflow:clip;   /* 그림이 움직여도 가로 스크롤이 생기지 않게 */
+  scroll-margin-top:var(--header-h);
+}
+.hero::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:820px;height:820px;right:-240px;top:-220px;border-radius:50%;
+  background:radial-gradient(circle, rgba(246,219,134,.55) 0%, rgba(246,219,134,.18) 42%, rgba(246,219,134,0) 70%);
+}
+.hero-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
+  gap:64px;
+  align-items:start;
+}
+.hero-copy{position:relative;z-index:2;padding-top:8px}
+.hero h1{margin:28px 0 0;font-size:clamp(34px, 4.6vw, 60px);line-height:1.16;letter-spacing:-.05em}
+.h1-light{display:block;font-weight:300;color:var(--ink-2)}
+.h1-strong{display:block;font-weight:800}
+.h1-strong em{
+  font-style:normal;
+  background:linear-gradient(transparent 70%, var(--yellow) 70%, var(--yellow) 88%, transparent 88%);
+}
+.identity{
+  margin:30px 0 0;padding:4px 0 4px 20px;
+  border-left:2px solid var(--yellow);
+  font-size:clamp(17px, 1.7vw, 21px);line-height:1.6;font-weight:500;color:var(--ink-2);
+  max-width:28em;
+}
+.identity strong{font-weight:800;color:var(--ink)}
+.identity-role{display:block;margin-bottom:4px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.hero-lead{margin:24px 0 30px;max-width:34em;color:var(--ink-2);font-size:16px}
+.credits{margin:40px 0 0;padding:0;border-top:1px solid var(--line-strong);max-width:560px}
+.credits div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.credits dt{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--ink-3);padding-top:2px}
+.credits dd{margin:0;font-size:15px;font-weight:700}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* --- 영상 작업실 그림 --- */
+.hero-visual{position:relative;z-index:1;min-width:0}
+.scene-figure{margin:0}
+.scene-stage{
+  position:relative;
+  /* 위쪽 여백 = 움직임이 차지할 공간. 그림이 떠오르거나 스크롤로 올라가도 이 여백 안에서만 움직입니다. */
+  padding:20px 0 10px;
+}
+.scene-motion{
+  transform-origin:50% 62%;
+  will-change:transform;
+  backface-visibility:hidden;
+  pointer-events:none; /* 그림이 움직여도 클릭·터치를 가로채지 않음 */
+}
+.studio-svg{width:100%;height:auto;filter:drop-shadow(0 34px 38px rgba(40,26,4,.26)) drop-shadow(0 8px 12px rgba(40,26,4,.12))}
+.scene-tools{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-top:14px}
+.motion-toggle{
+  display:inline-flex;align-items:center;gap:8px;
+  min-height:38px;padding:0 16px 0 12px;border-radius:999px;
+  border:1px solid var(--line-strong);background:rgba(251,248,242,.7);
+  font-size:13px;font-weight:700;cursor:pointer;
+}
+.motion-toggle:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.motion-toggle svg{width:15px;height:15px}
+.motion-toggle .icon-play{display:none}
+.motion-toggle[data-state="stopped"] .icon-pause{display:none}
+.motion-toggle[data-state="stopped"] .icon-play{display:block}
+.motion-status{margin:0;font-size:12.5px;color:var(--ink-3)}
+.scene-caption{margin-top:22px;padding-top:20px;border-top:1px solid var(--line-strong)}
+.scene-caption h2{margin:0 0 14px;font-size:14px;font-weight:700;letter-spacing:-.01em}
+.scene-caption h2 span{font-weight:500;color:var(--ink-3)}
+.legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.legend li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.legend .serif-num{font-size:16px;color:var(--ochre);line-height:1.4}
+.legend strong{display:block;color:var(--ink);font-size:14px}
+
+/* --- 기획·구현·증명 --- */
+.pillars{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3, minmax(0,1fr));margin:88px 0 0;padding:0;list-style:none;border-top:1px solid var(--line-strong)}
+.pillar{padding:28px 32px 4px 0}
+.pillar+.pillar{padding-left:32px;border-left:1px solid var(--line)}
+.pillar-head{display:flex;align-items:baseline;gap:12px}
+.pillar-head .serif-num{font-size:28px;color:var(--ink)}
+.pillar-en{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.pillar h3{margin:12px 0 8px;font-size:21px}
+.pillar p{margin:0;color:var(--ink-2);font-size:15px}
+
+@media (max-width:960px){
+  .hero{padding:44px 0 72px}
+  .hero-grid{grid-template-columns:1fr;gap:12px}
+  .hero-visual{width:100%;max-width:600px;margin-inline:auto}
+  /* 모바일: 글·버튼 아래 배치. 위쪽 여백(56px)이 최대 이동량(약 50px)보다 커서 버튼을 덮지 않음 */
+  .scene-stage{padding:56px 0 10px}
+  .pillars{grid-template-columns:1fr;margin-top:56px}
+  .pillar,.pillar+.pillar{padding:22px 0;border-left:0}
+  .pillar+.pillar{border-top:1px solid var(--line)}
+}
+@media (max-width:560px){
+  .container{width:calc(100% - 40px)}
+  .credits div{grid-template-columns:76px 1fr;gap:12px}
+  .btn-row .btn{flex:1 1 auto}
+  .legend{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   4. 공통 섹션
+   ========================================================= */
+.section{padding:120px 0;scroll-margin-top:var(--header-h)}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 64px;align-items:end;margin-bottom:56px}
+.section-title{margin:18px 0 0;font-size:clamp(32px, 4.2vw, 54px);font-weight:800;line-height:1.12;letter-spacing:-.05em}
+.section-desc{margin:0;max-width:30em;color:var(--ink-2);font-size:16px}
+.section-dark{background:var(--night);color:var(--ivory)}
+.section-dark .kicker{color:var(--ivory-3)}
+.section-dark .kicker .serif-num{color:var(--ivory)}
+.section-dark .section-desc{color:var(--ivory-2)}
+.section-tint{background:var(--paper-2)}
+@media (max-width:860px){
+  .section{padding:84px 0}
+  .section-head{grid-template-columns:1fr;margin-bottom:40px}
+}
+
+/* =========================================================
+   5. 프로젝트 (다크)
+   ========================================================= */
+.project-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:28px}
+.project-list > li:first-child{grid-column:1 / -1}
+.project-card{
+  display:flex;flex-direction:column;height:100%;
+  background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--radius);overflow:hidden;
+}
+.project-list > li:first-child .project-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.project-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#2A251E}
+.project-list > li:first-child .project-thumb{aspect-ratio:auto;min-height:420px}
+.project-thumb > svg{position:absolute;inset:0;width:100%;height:100%}
+.thumb-chip{
+  position:absolute;top:16px;z-index:1;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 12px;border-radius:999px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(20,17,13,.6);color:var(--ivory);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.thumb-chip.right{right:16px;background:var(--yellow);color:var(--ink)}
+.thumb-chip svg{width:10px;height:10px}
+.project-body{display:flex;flex-direction:column;gap:12px;padding:30px 32px 32px;flex:1}
+.project-list > li:first-child .project-body{padding:44px 44px 40px;justify-content:center}
+.project-index{display:flex;align-items:baseline;gap:10px;margin:0;font-size:13px;font-weight:600;letter-spacing:0;color:var(--ivory-3)}
+.project-index .serif-num{font-size:22px;color:var(--yellow);letter-spacing:0}
+.project-card h3{margin:2px 0 0;font-size:clamp(21px, 2.1vw, 28px);line-height:1.3}
+.project-card .summary{margin:0;color:var(--ivory-2);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:4px 0 0;padding:0}
+.tag{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--night-line);color:rgba(244,239,230,.82)}
+.project-role{margin:0;font-size:13px;color:var(--ivory-3)}
+.project-role b{color:var(--ivory);font-weight:700}
+.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
+@media (max-width:900px){
+  .project-list{grid-template-columns:1fr}
+  .project-list > li:first-child .project-card{display:flex}
+  .project-list > li:first-child .project-thumb{aspect-ratio:16/10;min-height:0}
+  .project-list > li:first-child .project-body{padding:30px 28px 30px}
+  .project-body{padding:26px 24px 28px}
+}
+
+/* --- 상세 보기(모달) --- */
+.project-dialog{
+  width:min(840px, 100% - 32px);max-width:none;
+  max-height:min(90vh, 980px);
+  padding:0;border:0;border-radius:24px;
+  background:var(--card);color:var(--ink);
+  box-shadow:0 40px 120px rgba(0,0,0,.45);
+  overflow:auto;overscroll-behavior:contain;
+}
+.project-dialog::backdrop{background:rgba(12,10,8,.72);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.no-dialog .project-dialog[open]{position:fixed;inset:0;margin:auto;z-index:200}
+.dialog-bar{
+  position:sticky;top:0;z-index:2;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px clamp(20px, 4.5vw, 44px);
+  background:rgba(251,248,242,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.dialog-count{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.dialog-count .serif-num{font-size:16px;color:var(--ink);margin-right:4px}
+.dialog-close{width:42px;height:42px;flex:none;border-radius:50%;border:1px solid var(--line-strong);background:transparent;cursor:pointer;display:grid;place-items:center}
+.dialog-close:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.dialog-close svg{width:18px;height:18px}
+.dialog-body{padding:30px clamp(20px, 4.5vw, 44px) 4px}
+.dialog-kicker{margin:0;font-size:13px;font-weight:700;color:var(--ochre)}
+.dialog-title{margin:10px 0 14px;font-size:clamp(25px, 3.3vw, 38px);line-height:1.2;letter-spacing:-.045em}
+.dialog-lead{margin:0;color:var(--ink-2);font-size:16.5px}
+.detail-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));margin:30px 0 4px;padding:0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line)}
+.detail-grid div{padding:14px 16px 14px 0}
+.detail-grid div+div{padding-left:16px;border-left:1px solid var(--line)}
+.detail-grid dt{font-size:12px;font-weight:600;color:var(--ink-3)}
+.detail-grid dd{margin:2px 0 0;font-size:14.5px;font-weight:700;line-height:1.5}
+.detail-block h4{display:flex;align-items:center;gap:10px;margin:36px 0 12px;font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.detail-block h4::before{content:"";width:18px;height:2px;background:var(--yellow)}
+.detail-block p{margin:0;color:var(--ink-2)}
+.steps{list-style:none;counter-reset:step;margin:0;padding:0;border-top:1px solid var(--line)}
+.steps li{counter-increment:step;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.steps li::before{content:counter(step, decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ochre);line-height:1.6}
+.steps strong,.checks strong{color:var(--ink)}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px;color:var(--ink-2)}
+.checks li{position:relative;padding-left:20px}
+.checks li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--ink-3)}
+.tags-light{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.tags-light li{font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--line-strong)}
+.dialog-nav{display:flex;justify-content:space-between;gap:12px;margin:36px clamp(20px, 4.5vw, 44px) 0;padding:18px 0 30px;border-top:1px solid var(--line)}
+
+/* 영상 */
+.video-wrap{margin:28px 0 0}
+.video-frame{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--night)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-poster{
+  position:absolute;inset:0;width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  border:0;padding:0;cursor:pointer;color:var(--ivory);
+  background:var(--poster, linear-gradient(135deg, #2B3341, #14110D));
+}
+.video-poster::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%, rgba(20,17,13,.1), rgba(20,17,13,.62))}
+.video-play{position:relative;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--ink);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.video-play svg{width:26px;height:26px;margin-left:4px}
+.video-poster:hover .video-play{background:var(--ivory)}
+.video-label{position:relative;font-size:15px;font-weight:700}
+.video-sub{position:relative;font-size:12.5px;color:rgba(244,239,230,.78)}
+.video-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin:10px 0 0;font-size:13px;color:var(--ink-3)}
+.video-meta a{font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:2px;text-underline-offset:4px}
+
+@media (max-width:640px){
+  .project-dialog{width:100%;margin:auto 0 0;max-height:92vh;border-radius:22px 22px 0 0}
+  .detail-grid{grid-template-columns:1fr}
+  .detail-grid div,.detail-grid div+div{padding:12px 0;border-left:0}
+  .detail-grid div+div{border-top:1px solid var(--line)}
+  .dialog-nav .btn{flex:1}
+}
+
+/* =========================================================
+   6. 역량
+   ========================================================= */
+.skill-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));border-top:1px solid var(--line-strong)}
+.skill{padding:36px 44px 40px 0;border-bottom:1px solid var(--line)}
+.skill:nth-child(even){padding:36px 0 40px 44px;border-left:1px solid var(--line)}
+.skill-head{display:flex;align-items:baseline;gap:14px}
+.skill-head .serif-num{font-size:22px;color:var(--ochre)}
+.skill h3{margin:0;font-size:23px}
+.skill-sub{margin:6px 0 0 36px;font-size:14px;color:var(--ink-3)}
+.skill ul{list-style:none;margin:18px 0 0 36px;padding:0;display:grid;gap:8px}
+.skill li{position:relative;padding-left:18px;color:var(--ink-2);font-size:15px}
+.skill li::before{content:"";position:absolute;left:0;top:.82em;width:8px;height:1px;background:var(--ink-3)}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:20px 0 0 36px;font-size:13px;font-weight:600;color:var(--ink-3)}
+.tools{display:grid;grid-template-columns:200px 1fr;gap:16px 24px;align-items:baseline;margin-top:44px}
+.tools h3{margin:0;font-size:14px;font-weight:700;color:var(--ink-2)}
+.tool-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tool-list li{padding:7px 15px;border-radius:999px;border:1px solid var(--line-strong);font-size:14px;font-weight:600;background:rgba(251,248,242,.6)}
+@media (max-width:860px){
+  .skill-list{grid-template-columns:1fr}
+  .skill,.skill:nth-child(even){padding:30px 0 32px;border-left:0}
+  .tools{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .skill-sub,.skill ul,.proof{margin-left:0}
+}
+
+/* =========================================================
+   7. 활동 기록
+   ========================================================= */
+.stats{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));margin:0 0 56px;padding:0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+.stats div{padding:22px 0 20px 24px}
+.stats div:first-child{padding-left:0}
+.stats div+div{border-left:1px solid var(--line)}
+.stats dt{font-size:13px;font-weight:600;color:var(--ink-3)}
+.stats dd{margin:2px 0 0;font-size:clamp(34px, 4vw, 52px);font-weight:300;letter-spacing:-.04em;line-height:1.1}
+.stats dd small{font-size:15px;font-weight:600;letter-spacing:-.01em;margin-left:4px;color:var(--ink-2)}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-strong)}
+.log-item{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;padding:30px 0;border-bottom:1px solid var(--line)}
+.log-side{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.log-date{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.log-type{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2)}
+.log-title{margin:0;font-size:20px}
+.log-org{margin:4px 0 0;font-size:14px;font-weight:600;color:var(--ink-3)}
+.log-desc{margin:10px 0 0;color:var(--ink-2);font-size:15px;max-width:44em}
+.log-main .link-btn{margin-top:12px;display:inline-block}
+@media (max-width:760px){
+  .stats{grid-template-columns:1fr 1fr}
+  .stats div,.stats div:first-child{padding:18px 0 16px 0}
+  .stats div:nth-child(even){padding-left:20px}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .stats div:nth-child(3){border-left:0}
+  .log-item{grid-template-columns:1fr;gap:10px;padding:26px 0}
+  .log-side{flex-direction:row;align-items:center;gap:10px}
+}
+
+/* =========================================================
+   8. 연락처 · 푸터 (다크)
+   ========================================================= */
+.contact{padding-bottom:64px}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:48px 72px;align-items:end}
+.contact-title{margin:18px 0 0;font-size:clamp(30px, 4.2vw, 54px);font-weight:300;line-height:1.2;letter-spacing:-.05em}
+.contact-title strong{font-weight:800}
+.contact-mail{
+  display:inline-flex;align-items:center;gap:14px;margin-top:40px;
+  font-size:clamp(26px, 4.6vw, 58px);font-weight:600;letter-spacing:-.04em;line-height:1.2;
+  color:var(--ivory);text-decoration:none;word-break:break-all;
+  border-bottom:2px solid var(--yellow);padding-bottom:6px;
+}
+.contact-mail svg{width:.7em;height:.7em;flex:none;color:var(--yellow)}
+.contact-mail:hover{color:var(--yellow)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.copy-status{min-height:1.6em;margin:12px 0 0;font-size:14px;color:var(--ivory-2)}
+.contact-info{margin:0;padding:0;border-top:1px solid var(--night-line)}
+.contact-info div{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--night-line)}
+.contact-info dt{font-size:12px;font-weight:600;color:var(--ivory-3);padding-top:2px}
+.contact-info dd{margin:0;font-size:15px;font-weight:600;word-break:break-all}
+.site-footer{background:var(--night);color:var(--ivory-3);font-size:13px}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:28px 0 40px;border-top:1px solid var(--night-line)}
+.site-footer a{color:var(--ivory-2);font-weight:600;text-decoration:none}
+.site-footer a:hover{color:var(--yellow)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<!-- ===================== 헤더 ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#about" aria-label="장학성 포트폴리오 처음으로">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">장학성</span>
+      <span class="brand-sub">Content Creator</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="메뉴 열기">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="주요 메뉴">
+      <ul class="nav-list">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#skills">역량</a></li>
+        <li><a href="#activity">활동 기록</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== 01. 소개 ===================== -->
+<section class="hero" id="about" aria-labelledby="heroTitle">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="kicker"><span class="serif-num">01</span>Portfolio 2026</p>
+        <h1 id="heroTitle">
+          <span class="h1-light">빈 화면에서 시작해</span>
+          <span class="h1-strong">마음에 닿는 <em>장면</em>을 만듭니다</span>
+        </h1>
+        <p class="identity">
+          <span class="identity-role">Content Creator</span>
+          콘텐츠의 가능성을 <strong>기획</strong>하고, 기술로 <strong>구현</strong>하며, 사람들의 반응으로 <strong>증명</strong>하는 콘텐츠 크리에이터.
+        </p>
+        <p class="hero-lead">
+          가톨릭대학교 미디어기술콘텐츠학과에서 노래와 영상, 숏폼과 SNS를 넘나들며 이야기를 만들고 있습니다.
+          CJ ENM에서 더 많은 사람에게 닿는 콘텐츠의 첫 장면을 함께 만들고 싶습니다.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#projects">
+            프로젝트 보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-line" href="#contact">연락하기</a>
+        </div>
+        <dl class="credits">
+          <div><dt>학교</dt><dd>가톨릭대학교 미디어기술콘텐츠학과</dd></div>
+          <div><dt>지원</dt><dd>CJ ENM 엔터테인먼트부문</dd></div>
+          <div><dt>관심 분야</dt><dd>콘텐츠 기획 · 숏폼 · AI 영상 · SNS 마케팅</dd></div>
+        </dl>
+      </div>
+
+      <!-- 영상 작업실 그림 -->
+      <div class="hero-visual">
+        <figure class="scene-figure" aria-labelledby="sceneCaptionTitle">
+          <div class="scene-stage">
+            <div class="scene-motion" id="sceneMotion" data-motion="init">
+              <svg class="studio-svg" viewBox="0 0 560 480" role="img" aria-labelledby="studioTitle studioDesc" xmlns="http://www.w3.org/2000/svg">
+                <title id="studioTitle">장학성의 밤의 영상 작업실 일러스트</title>
+                <desc id="studioDesc">어두운 작업실에서 노랗게 빛나는 둥근 캐릭터가 헤드폰을 쓰고 붓을 들고 있습니다. 책상 위 듀얼 모니터 중 왼쪽에는 영상 편집 타임라인이, 오른쪽에는 빛의 원으로 된 미디어아트가 켜져 있습니다. 벽에는 추상화 액자와 둥근 빛 설치 작품, 밤 풍경이 보이는 창문이 있고, 책상에는 붓이 꽂힌 도자기 컵과 팔레트, 스탠드 조명이 놓여 있습니다.</desc>
+                <defs>
+                  <linearGradient id="sWall" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2E2922"/>
+                    <stop offset="1" stop-color="#1F1B16"/>
+                  </linearGradient>
+                  <linearGradient id="sFloor" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1B1814"/>
+                    <stop offset="1" stop-color="#110F0C"/>
+                  </linearGradient>
+                  <radialGradient id="sVignette" cx="0.5" cy="0.48" r="0.72">
+                    <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+                    <stop offset="1" stop-color="#000" stop-opacity="0.42"/>
+                  </radialGradient>
+                  <radialGradient id="sWarmGlow" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0" stop-color="#F2C230" stop-opacity="0.34"/>
+                    <stop offset="1" stop-color="#F2C230" stop-opacity="0"/>
+                  </radialGradient>
+                  <radialGradient id="sSoftGlow" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0" stop-color="#F6DB86" stop-opacity="0.16"/>
+                    <stop offset="1" stop-color="#F6DB86" stop-opacity="0"/>
+                  </radialGradient>
+                  <linearGradient id="sSpot" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#F4EFE6" stop-opacity="0.16"/>
+                    <stop offset="1" stop-color="#F4EFE6" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="sLampBeam" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#FFE08A" stop-opacity="0.38"/>
+                    <stop offset="1" stop-color="#FFE08A" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="sWindow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1F2738"/>
+                    <stop offset="0.6" stop-color="#3B3E52"/>
+                    <stop offset="1" stop-color="#7A5C45"/>
+                  </linearGradient>
+                  <linearGradient id="sWood" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#6E5A45"/>
+                    <stop offset="1" stop-color="#4E3F31"/>
+                  </linearGradient>
+                  <linearGradient id="sWoodSide" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#4A3C2F"/>
+                    <stop offset="1" stop-color="#3A2F25"/>
+                  </linearGradient>
+                  <linearGradient id="sMetal" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#8E8A82"/>
+                    <stop offset="1" stop-color="#55524C"/>
+                  </linearGradient>
+                  <linearGradient id="sCeramic" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#EFE8DA"/>
+                    <stop offset="1" stop-color="#B9AE98"/>
+                  </linearGradient>
+                  <linearGradient id="sPreview" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#E9C77B"/>
+                    <stop offset="1" stop-color="#C98B3A"/>
+                  </linearGradient>
+                  <radialGradient id="sArtScreen" cx="0.5" cy="0.5" r="0.7">
+                    <stop offset="0" stop-color="#3A2A10"/>
+                    <stop offset="1" stop-color="#0D0B08"/>
+                  </radialGradient>
+                  <radialGradient id="sBody" cx="0.38" cy="0.32" r="0.78">
+                    <stop offset="0" stop-color="#FFF6D2"/>
+                    <stop offset="0.45" stop-color="#F9D768"/>
+                    <stop offset="1" stop-color="#D49517"/>
+                  </radialGradient>
+                  <radialGradient id="sBodyShade" cx="0.62" cy="0.78" r="0.72">
+                    <stop offset="0.55" stop-color="#5C3A00" stop-opacity="0"/>
+                    <stop offset="1" stop-color="#5C3A00" stop-opacity="0.34"/>
+                  </radialGradient>
+                  <radialGradient id="sSpec" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+                  </radialGradient>
+                  <filter id="sShadow" x="-30%" y="-30%" width="160%" height="170%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+                  </filter>
+                  <filter id="sGlow" x="-80%" y="-80%" width="260%" height="260%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <clipPath id="sClipRoom"><rect x="16" y="16" width="528" height="448" rx="40"/></clipPath>
+                  <clipPath id="sClipArt"><rect x="213" y="65" width="92" height="64"/></clipPath>
+                  <clipPath id="sClipScreenA"><rect x="153" y="175" width="136" height="84" rx="3"/></clipPath>
+                  <clipPath id="sClipScreenB"><rect x="307" y="169" width="136" height="90" rx="3"/></clipPath>
+                  <clipPath id="sClipPreview"><rect x="160" y="182" width="64" height="38" rx="2"/></clipPath>
+                  <circle id="sLed" r="1.5" fill="#F6DB86"/>
+                </defs>
+
+                <g clip-path="url(#sClipRoom)">
+                  <!-- 방 -->
+                  <rect x="16" y="16" width="528" height="448" fill="url(#sWall)"/>
+                  <rect x="16" y="352" width="528" height="112" fill="url(#sFloor)"/>
+                  <rect x="16" y="350" width="528" height="2" fill="#3A332A"/>
+                  <ellipse cx="290" cy="226" rx="230" ry="120" fill="url(#sSoftGlow)"/>
+
+                  <!-- 창문 -->
+                  <rect x="40" y="48" width="98" height="160" rx="4" fill="#3A332A"/>
+                  <rect x="46" y="54" width="86" height="148" fill="url(#sWindow)"/>
+                  <circle cx="110" cy="80" r="16" fill="#F4E9C8" opacity=".12"/>
+                  <circle cx="110" cy="80" r="7.5" fill="#F4E9C8"/>
+                  <g fill="#161B27">
+                    <rect x="46" y="150" width="18" height="52"/>
+                    <rect x="66" y="128" width="20" height="74"/>
+                    <rect x="88" y="160" width="16" height="42"/>
+                    <rect x="106" y="140" width="26" height="62"/>
+                  </g>
+                  <g fill="#F2C230" opacity=".75">
+                    <rect x="70" y="136" width="3" height="4"/><rect x="78" y="146" width="3" height="4"/>
+                    <rect x="70" y="160" width="3" height="4"/><rect x="112" y="150" width="3" height="4"/>
+                    <rect x="122" y="168" width="3" height="4"/><rect x="51" y="160" width="3" height="4"/>
+                  </g>
+                  <rect x="87.5" y="54" width="3" height="148" fill="#3A332A"/>
+                  <rect x="46" y="124" width="86" height="3" fill="#3A332A"/>
+                  <rect x="36" y="206" width="106" height="6" rx="2" fill="#4A4036"/>
+
+                  <!-- 액자 그림 + 조명 -->
+                  <path d="M240 16 H278 L330 150 H188 Z" fill="url(#sSpot)"/>
+                  <g filter="url(#sShadow)">
+                    <rect x="200" y="52" width="118" height="90" rx="2" fill="#B89A6E"/>
+                  </g>
+                  <rect x="205" y="57" width="108" height="80" fill="#EFE6D2"/>
+                  <g clip-path="url(#sClipArt)">
+                    <rect x="213" y="65" width="92" height="64" fill="#E6D9BE"/>
+                    <circle cx="246" cy="92" r="18" fill="#D9A441"/>
+                    <rect x="272" y="72" width="24" height="57" fill="#8FA58A"/>
+                    <path d="M213 129 Q240 100 268 129 Z" fill="#B65E3C"/>
+                    <circle cx="288" cy="86" r="6" fill="#F4EFE6"/>
+                    <line x1="224" y1="72" x2="300" y2="122" stroke="#16130F" stroke-width="1.2"/>
+                  </g>
+
+                  <!-- 벽 미디어아트(빛 설치 작품) -->
+                  <circle cx="452" cy="100" r="76" fill="url(#sWarmGlow)" opacity=".7"/>
+                  <circle cx="452" cy="100" r="44" fill="#0E0C09" stroke="#3A332A" stroke-width="1.5"/>
+                  <circle cx="452" cy="100" r="33" fill="none" stroke="#F2C230" stroke-width="1" opacity=".35"/>
+                  <circle cx="452" cy="100" r="25" fill="none" stroke="#F2C230" stroke-width="1.4" opacity=".55"/>
+                  <circle cx="452" cy="100" r="16" fill="none" stroke="#F6DB86" stroke-width="1.8" opacity=".85"/>
+                  <circle cx="452" cy="100" r="7" fill="#FFE08A" filter="url(#sGlow)"/>
+                  <g transform="translate(452 100)">
+                    <use href="#sLed" transform="rotate(0) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(30) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(60) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(90) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(120) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(150) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(180) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(210) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(240) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(270) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(300) translate(0 -39)"/>
+                    <use href="#sLed" transform="rotate(330) translate(0 -39)"/>
+                  </g>
+
+                  <!-- 바닥 러그 -->
+                  <ellipse cx="282" cy="432" rx="216" ry="20" fill="#241F19"/>
+
+                  <!-- 책상 -->
+                  <rect x="98" y="298" width="10" height="122" rx="3" fill="url(#sWoodSide)"/>
+                  <g filter="url(#sShadow)">
+                    <rect x="372" y="298" width="92" height="122" rx="5" fill="url(#sWoodSide)"/>
+                  </g>
+                  <rect x="381" y="310" width="74" height="48" rx="3" fill="#54442F"/>
+                  <rect x="381" y="364" width="74" height="48" rx="3" fill="#54442F"/>
+                  <rect x="408" y="330" width="20" height="3" rx="1.5" fill="#C9A25A"/>
+                  <rect x="408" y="384" width="20" height="3" rx="1.5" fill="#C9A25A"/>
+                  <g filter="url(#sShadow)">
+                    <rect x="80" y="286" width="400" height="14" rx="4" fill="url(#sWood)"/>
+                  </g>
+                  <rect x="84" y="287" width="392" height="2" rx="1" fill="#8C755C" opacity=".8"/>
+
+                  <!-- 모니터 1: 편집 타임라인 -->
+                  <rect x="214" y="266" width="14" height="14" fill="url(#sMetal)"/>
+                  <rect x="196" y="279" width="50" height="7" rx="3" fill="url(#sMetal)"/>
+                  <g filter="url(#sShadow)">
+                    <rect x="148" y="170" width="146" height="98" rx="7" fill="#0F0E0C"/>
+                  </g>
+                  <rect x="153" y="175" width="136" height="84" rx="3" fill="#121722"/>
+                  <g clip-path="url(#sClipScreenA)">
+                    <rect x="160" y="182" width="64" height="38" rx="2" fill="url(#sPreview)"/>
+                    <g clip-path="url(#sClipPreview)">
+                      <circle cx="210" cy="192" r="5" fill="#FFF1C2"/>
+                      <path d="M160 220 L178 204 L192 212 L206 202 L224 214 V220 Z" fill="#3A2E22"/>
+                    </g>
+                    <rect x="232" y="184" width="46" height="4" rx="2" fill="#3A4458"/>
+                    <rect x="232" y="193" width="34" height="4" rx="2" fill="#3A4458"/>
+                    <rect x="232" y="202" width="40" height="4" rx="2" fill="#3A4458"/>
+                    <rect x="232" y="212" width="20" height="4" rx="2" fill="#F2C230" opacity=".85"/>
+                    <rect x="160" y="226" width="122" height="28" rx="2" fill="#0B0F17"/>
+                    <rect x="163" y="230" width="34" height="6" rx="2" fill="#C99A3E"/>
+                    <rect x="200" y="230" width="48" height="6" rx="2" fill="#6F87A8"/>
+                    <rect x="251" y="230" width="28" height="6" rx="2" fill="#C99A3E"/>
+                    <rect x="163" y="239" width="58" height="6" rx="2" fill="#D8C7A3"/>
+                    <rect x="224" y="239" width="55" height="6" rx="2" fill="#B66A4A"/>
+                    <path d="M163 250 h3 v-2 h3 v4 h3 v-5 h3 v6 h3 v-4 h3 v3 h3 v-5 h3 v6 h3 v-3 h3 v2 h3 v-4 h3 v5 h3 v-3 h3 v2 h3" stroke="#8FA58A" stroke-width="1.2" fill="none"/>
+                    <rect x="213" y="224" width="2" height="32" fill="#F2C230"/>
+                    <path d="M209 223 h10 l-5 5 z" fill="#F2C230"/>
+                  </g>
+
+                  <!-- 모니터 2: 미디어아트 -->
+                  <rect x="368" y="266" width="14" height="14" fill="url(#sMetal)"/>
+                  <rect x="350" y="279" width="50" height="7" rx="3" fill="url(#sMetal)"/>
+                  <g filter="url(#sShadow)">
+                    <rect x="302" y="164" width="146" height="104" rx="7" fill="#0F0E0C"/>
+                  </g>
+                  <rect x="307" y="169" width="136" height="90" rx="3" fill="url(#sArtScreen)"/>
+                  <g clip-path="url(#sClipScreenB)">
+                    <circle cx="375" cy="214" r="38" fill="url(#sWarmGlow)"/>
+                    <circle cx="375" cy="214" r="36" fill="none" stroke="#F2C230" stroke-width="1.2" opacity=".28"/>
+                    <circle cx="375" cy="214" r="27" fill="none" stroke="#F2C230" stroke-width="1.4" opacity=".45"/>
+                    <circle cx="375" cy="214" r="18" fill="none" stroke="#F6DB86" stroke-width="1.8" opacity=".75"/>
+                    <circle cx="375" cy="214" r="9" fill="#FFE08A" filter="url(#sGlow)"/>
+                    <circle cx="375" cy="214" r="4" fill="#FFF8E0"/>
+                    <path d="M307 240 Q340 222 372 238 T443 228" stroke="#E8A33A" stroke-width="1.6" fill="none" opacity=".85"/>
+                    <path d="M307 251 Q345 236 380 250 T443 242" stroke="#F4EFE6" stroke-width="1" fill="none" opacity=".4"/>
+                    <g fill="#F4EFE6">
+                      <circle cx="322" cy="182" r="1.3" opacity=".8"/>
+                      <circle cx="420" cy="184" r="1.5" opacity=".7"/>
+                      <circle cx="430" cy="202" r="1.1" opacity=".9"/>
+                      <circle cx="332" cy="200" r="1.1" opacity=".6"/>
+                      <circle cx="410" cy="176" r="1" opacity=".8"/>
+                    </g>
+                  </g>
+                  <ellipse cx="296" cy="214" rx="170" ry="70" fill="url(#sSoftGlow)"/>
+
+                  <!-- 키보드 · 팔레트 -->
+                  <rect x="250" y="278" width="88" height="8" rx="3" fill="#2A2520"/>
+                  <path d="M258 282 h72" stroke="#4A433A" stroke-width="2" stroke-dasharray="3 2.5"/>
+                  <ellipse cx="418" cy="282" rx="24" ry="6" fill="#E9E0CC"/>
+                  <circle cx="405" cy="281" r="3" fill="#D9A441"/>
+                  <circle cx="415" cy="279" r="3" fill="#B65E3C"/>
+                  <circle cx="426" cy="280" r="3" fill="#8FA58A"/>
+                  <circle cx="434" cy="283" r="2.4" fill="#F4EFE6"/>
+
+                  <!-- 스탠드 조명 -->
+                  <path d="M400 286 L444 212 L470 212 L470 286 Z" fill="url(#sLampBeam)"/>
+                  <ellipse cx="470" cy="284" rx="15" ry="3.5" fill="#2A2520"/>
+                  <path d="M470 282 L490 232 L462 200" stroke="#3A332A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="490" cy="232" r="3.5" fill="#4A433A"/>
+                  <g transform="rotate(32 458 204)">
+                    <path d="M440 194 h36 l-6 18 h-24 z" fill="#2A2520"/>
+                    <ellipse cx="458" cy="212" rx="12" ry="2.6" fill="#FFE08A"/>
+                  </g>
+                  <circle cx="452" cy="216" r="20" fill="url(#sWarmGlow)"/>
+
+                  <!-- 붓 컵 -->
+                  <g stroke-linecap="round">
+                    <line x1="106" y1="262" x2="94" y2="206" stroke="#2A2520" stroke-width="4"/>
+                    <line x1="114" y1="262" x2="114" y2="198" stroke="#6E5A45" stroke-width="4"/>
+                    <line x1="122" y1="262" x2="134" y2="208" stroke="#2A2520" stroke-width="4"/>
+                  </g>
+                  <rect x="90" y="204" width="7" height="7" rx="1.5" fill="#C9A25A" transform="rotate(-12 94 207)"/>
+                  <rect x="110.5" y="196" width="7" height="7" rx="1.5" fill="#C9A25A"/>
+                  <rect x="130.5" y="206" width="7" height="7" rx="1.5" fill="#C9A25A" transform="rotate(12 134 209)"/>
+                  <ellipse cx="92.5" cy="196" rx="4.2" ry="9" fill="#D9A441" transform="rotate(-12 92.5 196)"/>
+                  <ellipse cx="114" cy="188" rx="4.2" ry="9" fill="#B65E3C"/>
+                  <ellipse cx="136" cy="198" rx="4.2" ry="9" fill="#8FA58A" transform="rotate(12 136 198)"/>
+                  <g filter="url(#sShadow)">
+                    <path d="M96 252 H132 V280 A6 6 0 0 1 126 286 H102 A6 6 0 0 1 96 280 Z" fill="url(#sCeramic)"/>
+                  </g>
+                  <ellipse cx="114" cy="252" rx="18" ry="3.5" fill="#F5F0E6"/>
+                  <rect x="96" y="266" width="36" height="2" fill="#B65E3C" opacity=".6"/>
+
+                  <!-- 화분 -->
+                  <ellipse cx="54" cy="368" rx="9" ry="34" fill="#2F3B2E" transform="rotate(-20 54 368)"/>
+                  <ellipse cx="72" cy="360" rx="9" ry="38" fill="#3D4B39" transform="rotate(12 72 360)"/>
+                  <ellipse cx="62" cy="352" rx="8" ry="30" fill="#4A5A44"/>
+                  <g filter="url(#sShadow)">
+                    <path d="M44 398 H84 L80 434 A5 5 0 0 1 75 438 H53 A5 5 0 0 1 48 434 Z" fill="#CDBFA6"/>
+                  </g>
+
+                  <!-- 둥근 캐릭터 -->
+                  <circle cx="270" cy="356" r="118" fill="url(#sWarmGlow)"/>
+                  <ellipse cx="270" cy="426" rx="54" ry="7" fill="#000" opacity=".5"/>
+                  <ellipse cx="246" cy="418" rx="15" ry="8" fill="#C98A14"/>
+                  <ellipse cx="294" cy="418" rx="15" ry="8" fill="#C98A14"/>
+                  <circle cx="270" cy="360" r="62" fill="url(#sBody)"/>
+                  <circle cx="270" cy="360" r="62" fill="url(#sBodyShade)"/>
+                  <ellipse cx="246" cy="326" rx="22" ry="13" fill="url(#sSpec)" transform="rotate(-25 246 326)"/>
+                  <!-- 헤드폰 -->
+                  <path d="M210 350 C206 266 334 266 330 350" stroke="#2A2520" stroke-width="7" fill="none" stroke-linecap="round"/>
+                  <rect x="196" y="334" width="20" height="38" rx="10" fill="#2A2520"/>
+                  <rect x="324" y="334" width="20" height="38" rx="10" fill="#2A2520"/>
+                  <circle cx="206" cy="353" r="3" fill="#F2C230"/>
+                  <circle cx="334" cy="353" r="3" fill="#F2C230"/>
+                  <!-- 얼굴 -->
+                  <ellipse cx="255" cy="356" rx="4.6" ry="6.6" fill="#2A2118"/>
+                  <ellipse cx="285" cy="356" rx="4.6" ry="6.6" fill="#2A2118"/>
+                  <circle cx="256.6" cy="353.4" r="1.6" fill="#FFFFFF"/>
+                  <circle cx="286.6" cy="353.4" r="1.6" fill="#FFFFFF"/>
+                  <ellipse cx="242" cy="370" rx="8" ry="4.5" fill="#E9855A" opacity=".22"/>
+                  <ellipse cx="298" cy="370" rx="8" ry="4.5" fill="#E9855A" opacity=".22"/>
+                  <path d="M264 371 Q270 376.5 276 371" stroke="#2A2118" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                  <!-- 팔 · 붓 -->
+                  <ellipse cx="214" cy="392" rx="12" ry="9" fill="#E8B13C" transform="rotate(-24 214 392)"/>
+                  <line x1="330" y1="378" x2="360" y2="330" stroke="#2A2520" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="355" y="321" width="7" height="7" rx="1.5" fill="#C9A25A" transform="rotate(32 358.5 324.5)"/>
+                  <ellipse cx="364" cy="315" rx="4.4" ry="9" fill="#B65E3C" transform="rotate(32 364 315)"/>
+                  <ellipse cx="326" cy="382" rx="12" ry="9" fill="#E8B13C" transform="rotate(-38 326 382)"/>
+                  <circle cx="378" cy="305" r="2.2" fill="#D9A441"/>
+                  <circle cx="384" cy="316" r="1.5" fill="#8FA58A"/>
+
+                  <!-- 비네트 -->
+                  <rect x="16" y="16" width="528" height="448" fill="url(#sVignette)"/>
+
+                  <!-- 번호 표시 (아래 설명과 연결) -->
+                  <g font-family="Pretendard Variable, Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" fill="#16130F">
+                    <circle cx="298" cy="150" r="10" fill="#F4EFE6"/><text x="298" y="153.8">1</text>
+                    <circle cx="198" cy="300" r="10" fill="#F4EFE6"/><text x="198" y="303.8">2</text>
+                    <circle cx="326" cy="46" r="10" fill="#F4EFE6"/><text x="326" y="49.8">3</text>
+                    <circle cx="502" cy="58" r="10" fill="#F4EFE6"/><text x="502" y="61.8">4</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="scene-tools">
+            <button class="motion-toggle" id="motionToggle" type="button" aria-controls="sceneMotion" data-state="running">
+              <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+              <span class="motion-label">움직임 멈춤</span>
+            </button>
+            <p class="motion-status" id="motionStatus" aria-live="polite">작업실이 천천히 떠 있어요.</p>
+          </div>
+
+          <figcaption class="scene-caption">
+            <h2 id="sceneCaptionTitle">그림 속 작업실 <span>— 장면에 담은 네 가지 태도</span></h2>
+            <ol class="legend">
+              <li><span class="serif-num">1</span><span><strong>듀얼 모니터</strong>왼쪽은 편집 타임라인, 오른쪽은 미디어아트. 기획과 제작, 기술과 감성을 한 책상에서 함께 다룹니다.</span></li>
+              <li><span class="serif-num">2</span><span><strong>빛나는 둥근 캐릭터</strong>어두운 방을 밝히는 작업자, 저 자신이에요. 헤드폰은 소리와 음악까지 설계하는 습관을 뜻합니다.</span></li>
+              <li><span class="serif-num">3</span><span><strong>붓과 그림</strong>손으로 그리는 아날로그 감각. 'Empty'의 빈 캔버스처럼 모든 작업은 빈 화면에서 시작합니다.</span></li>
+              <li><span class="serif-num">4</span><span><strong>미디어아트</strong>디지털 기술로 감정을 눈에 보이게 만드는 일, 미디어기술콘텐츠학과에서 배우는 방향입니다.</span></li>
+            </ol>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <ul class="pillars" aria-label="일하는 방식">
+      <li class="pillar">
+        <div class="pillar-head"><span class="serif-num">i.</span><span class="pillar-en">Plan</span></div>
+        <h3>가능성을 기획합니다</h3>
+        <p>보는 사람이 어떤 마음이 들어야 하는지 먼저 정하고, 장면·색·음악을 거꾸로 설계합니다.</p>
+      </li>
+      <li class="pillar">
+        <div class="pillar-head"><span class="serif-num">ii.</span><span class="pillar-en">Build</span></div>
+        <h3>기술로 구현합니다</h3>
+        <p>음악 생성 AI, 영상 생성 AI, 웹 코드까지 연출 의도에 맞는 도구로 직접 만듭니다.</p>
+      </li>
+      <li class="pillar">
+        <div class="pillar-head"><span class="serif-num">iii.</span><span class="pillar-en">Prove</span></div>
+        <h3>반응으로 증명합니다</h3>
+        <p>콘텐츠 유형별 좋아요·댓글·조회수를 정리해 무엇이 반응을 만드는지 확인합니다.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 02. 프로젝트 ===================== -->
+<section class="section section-dark" id="projects" aria-labelledby="projectsTitle">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="kicker"><span class="serif-num">02</span>Selected Works</p>
+        <h2 class="section-title" id="projectsTitle">대표 프로젝트</h2>
+      </div>
+      <p class="section-desc">음악, 숏폼, 캠페인. 서로 다른 세 가지 형식으로 공감되는 이야기를 만들었습니다. 영상이 있는 프로젝트는 상세 보기 안에서 바로 재생할 수 있어요.</p>
+    </div>
+
+    <ul class="project-list">
+      <!-- 01 -->
+      <li>
+        <article class="project-card" data-project-card="empty">
+          <div class="project-thumb">
+            <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="teBg" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#262D3A"/>
+                  <stop offset="0.47" stop-color="#3D475A"/>
+                  <stop offset="0.53" stop-color="#D29A3A"/>
+                  <stop offset="1" stop-color="#E8C47A"/>
+                </linearGradient>
+                <radialGradient id="teSun" cx="0.5" cy="0.5" r="0.5">
+                  <stop offset="0" stop-color="#FFF3CF"/>
+                  <stop offset="1" stop-color="#FFF3CF" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="teShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".35"/></filter>
+              </defs>
+              <rect width="640" height="400" fill="url(#teBg)"/>
+              <g fill="#1C222D">
+                <rect x="40" y="210" width="44" height="190"/><rect x="92" y="170" width="54" height="230"/>
+                <rect x="154" y="236" width="40" height="164"/><rect x="202" y="200" width="48" height="200"/>
+              </g>
+              <g fill="#E8B04A" opacity=".7">
+                <rect x="104" y="186" width="5" height="7"/><rect x="118" y="206" width="5" height="7"/><rect x="52" y="230" width="5" height="7"/>
+                <rect x="214" y="222" width="5" height="7"/><rect x="226" y="250" width="5" height="7"/><rect x="164" y="256" width="5" height="7"/>
+              </g>
+              <circle cx="520" cy="120" r="90" fill="url(#teSun)" opacity=".8"/>
+              <circle cx="520" cy="120" r="34" fill="#FFF3CF"/>
+              <path d="M320 330 Q420 270 500 306 T640 290 V400 H320 Z" fill="#B8792E" opacity=".7"/>
+              <path d="M286 372 L320 150 L354 372" stroke="#3B2C1C" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <g filter="url(#teShadow)"><rect x="252" y="118" width="136" height="110" rx="3" fill="#F4EFE6"/></g>
+              <rect x="240" y="226" width="160" height="10" rx="3" fill="#3B2C1C"/>
+              <text x="36" y="76" font-family="Iowan Old Style, Palatino, Georgia, serif" font-style="italic" font-size="48" fill="#F4EFE6">Empty</text>
+              <text x="38" y="104" font-family="Pretendard Variable, Pretendard, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#F4EFE6" opacity=".7">AN ANIMATED MUSIC VIDEO</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-index"><span class="serif-num">01</span>개인 작품 · 2026</p>
+            <h3>'Empty' AI 애니메이션 뮤직비디오</h3>
+            <p class="summary">화가를 꿈꿨던 직장인이 빈 캔버스를 다시 마주하는 3분의 이야기. 노래부터 28컷 스토리보드, 영상 생성 프롬프트까지 직접 설계했습니다.</p>
+            <ul class="tags"><li class="tag">뮤직비디오</li><li class="tag">스토리보드</li><li class="tag">생성형 AI</li></ul>
+            <p class="project-role">역할 <b>기획 · 작사 · 연출</b></p>
+            <div class="project-actions">
+              <button class="btn btn-light btn-sm" type="button" data-project="empty" aria-haspopup="dialog">상세 보기</button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 02 -->
+      <li>
+        <article class="project-card" data-project-card="pfeel">
+          <div class="project-thumb">
+            <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="tpBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#E9D7CA"/>
+                  <stop offset="1" stop-color="#C9A28D"/>
+                </linearGradient>
+                <filter id="tpShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#3A2418" flood-opacity=".35"/></filter>
+              </defs>
+              <rect width="640" height="400" fill="url(#tpBg)"/>
+              <circle cx="150" cy="120" r="120" fill="#F4EFE6" opacity=".25"/>
+              <rect x="40" y="300" width="560" height="1" fill="#16130F" opacity=".15"/>
+              <g filter="url(#tpShadow)">
+                <rect x="372" y="44" width="148" height="300" rx="26" fill="#16130F"/>
+              </g>
+              <rect x="382" y="54" width="128" height="280" rx="18" fill="#F4EFE6"/>
+              <rect x="428" y="130" width="38" height="96" rx="14" fill="#B65E3C"/>
+              <rect x="436" y="110" width="22" height="24" rx="4" fill="#8E4429"/>
+              <rect x="438" y="156" width="18" height="26" rx="4" fill="#F4EFE6" opacity=".55"/>
+              <circle cx="447" cy="276" r="17" fill="#F2C230"/>
+              <path d="M442 268 L455 276 L442 284 Z" fill="#16130F"/>
+              <rect x="400" y="306" width="94" height="3" rx="1.5" fill="#D9CDBB"/>
+              <rect x="400" y="306" width="36" height="3" rx="1.5" fill="#B65E3C"/>
+              <text x="40" y="76" font-family="Iowan Old Style, Palatino, Georgia, serif" font-style="italic" font-size="44" fill="#16130F">P'FFEEL</text>
+              <text x="42" y="104" font-family="Pretendard Variable, Pretendard, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#16130F" opacity=".6">SHORT-FORM · 9:16</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-index"><span class="serif-num">02</span>산학협력 · 2026.09 – 진행 중</p>
+            <h3>일론(THE iLLON) × 퓔(P'FFEEL) AI 홍보 숏폼</h3>
+            <p class="summary">화장품 기업 일론과의 산학협력. 6인 팀 대표로 두 브랜드 기획안을 병행해 기업이 고를 수 있도록 제안했습니다.</p>
+            <ul class="tags"><li class="tag">산학협력</li><li class="tag">숏폼 기획</li><li class="tag">팀 대표</li></ul>
+            <p class="project-role">역할 <b>팀 운영 · 숏폼 기획</b></p>
+            <div class="project-actions">
+              <button class="btn btn-light btn-sm" type="button" data-project="pfeel" aria-haspopup="dialog">상세 보기</button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 03 -->
+      <li>
+        <article class="project-card" data-project-card="campus">
+          <div class="project-thumb">
+            <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="tcBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#E6B940"/>
+                  <stop offset="1" stop-color="#C98C1E"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="400" fill="url(#tcBg)"/>
+              <path d="M70 200 L200 140 V312 L70 252 Z" fill="#16130F"/>
+              <rect x="40" y="194" width="38" height="64" rx="10" fill="#16130F"/>
+              <path d="M104 248 L122 300 H146 L130 252 Z" fill="#16130F"/>
+              <rect x="196" y="134" width="14" height="184" rx="7" fill="#F4EFE6"/>
+              <g stroke="#F4EFE6" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9">
+                <path d="M236 186 Q256 226 236 266"/>
+                <path d="M262 164 Q292 226 262 288"/>
+              </g>
+              <g>
+                <rect x="352" y="120" width="70" height="124" rx="10" fill="#F4EFE6"/>
+                <rect x="434" y="142" width="70" height="124" rx="10" fill="#16130F"/>
+                <rect x="516" y="120" width="70" height="124" rx="10" fill="#F4EFE6"/>
+                <path d="M380 172 L398 182 L380 192 Z" fill="#16130F"/>
+                <path d="M462 194 L480 204 L462 214 Z" fill="#F2C230"/>
+                <path d="M544 172 L562 182 L544 192 Z" fill="#16130F"/>
+              </g>
+              <text x="40" y="76" font-family="Iowan Old Style, Palatino, Georgia, serif" font-style="italic" font-size="44" fill="#16130F">Campus Cup</text>
+              <text x="42" y="104" font-family="Pretendard Variable, Pretendard, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#16130F" opacity=".65">BUCHEON · PROMOTION CHALLENGE</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-index"><span class="serif-num">03</span>대회 · 2026.05</p>
+            <h3>부천 캠퍼스 컵 홍보 챌린지</h3>
+            <p class="summary">대학생이 보고 지나치지 않고 직접 참여하는 홍보를 목표로, 따라 하기 쉬운 세로형 숏폼과 SNS 챌린지를 기획·제작했습니다.</p>
+            <ul class="tags"><li class="tag">캠페인</li><li class="tag">SNS 챌린지</li><li class="tag">숏폼 편집</li></ul>
+            <p class="project-role">역할 <b>콘셉트 기획 · 편집</b></p>
+            <div class="project-actions">
+              <button class="btn btn-light btn-sm" type="button" data-project="campus" aria-haspopup="dialog">상세 보기</button>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 03. 역량 ===================== -->
+<section class="section" id="skills" aria-labelledby="skillsTitle">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="kicker"><span class="serif-num">03</span>Capabilities</p>
+        <h2 class="section-title" id="skillsTitle">역량</h2>
+      </div>
+      <p class="section-desc">퍼센트 막대 대신, 실제로 해 본 일과 그 근거가 된 프로젝트로 정리했습니다.</p>
+    </div>
+
+    <ul class="skill-list">
+      <li class="skill">
+        <div class="skill-head"><span class="serif-num">01</span><h3>콘텐츠 기획 · 스토리텔링</h3></div>
+        <p class="skill-sub">감정선을 장면 단위로 설계합니다</p>
+        <ul>
+          <li>28컷 스토리라인과 카메라 구도·연출 단위 스토리보드 구성</li>
+          <li>기업 브리프에 맞춘 3장 내외 숏폼 기획안 작성</li>
+          <li>색과 톤으로 시간대·감정을 구분하는 비주얼 콘셉트 설계</li>
+        </ul>
+        <div class="proof">근거
+          <button class="link-btn" type="button" data-project="empty" aria-haspopup="dialog">'Empty'</button>
+          <button class="link-btn" type="button" data-project="pfeel" aria-haspopup="dialog">퓔 숏폼</button>
+        </div>
+      </li>
+      <li class="skill">
+        <div class="skill-head"><span class="serif-num">02</span><h3>AI 기반 음악 · 영상 제작</h3></div>
+        <p class="skill-sub">도구마다 다른 '입력 문법'을 익힙니다</p>
+        <ul>
+          <li>Suno 입력 방식에 맞춘 작사·곡 스타일 프롬프트 설계</li>
+          <li>Kling·Seedance 등 영상 생성 AI의 프롬프트 형식 분석과 컷별 변환</li>
+          <li>캐릭터 이미지를 8초 영상으로 만드는 실험</li>
+        </ul>
+        <div class="proof">근거
+          <button class="link-btn" type="button" data-project="empty" aria-haspopup="dialog">'Empty'</button>
+        </div>
+      </li>
+      <li class="skill">
+        <div class="skill-head"><span class="serif-num">03</span><h3>SNS · 데이터 분석</h3></div>
+        <p class="skill-sub">반응의 이유를 표로 확인합니다</p>
+        <ul>
+          <li>브랜드 인스타그램·UGC를 6가지 콘텐츠 유형으로 분류</li>
+          <li>유형별 평균 좋아요·댓글·조회수 비교표 작성</li>
+          <li>20대 대상 설문(구매 기준·첫인상·구매 의향) 설계 참여</li>
+        </ul>
+        <div class="proof">근거 <a class="link-btn" href="#activity">르떼 분석 · 활동 기록</a></div>
+      </li>
+      <li class="skill">
+        <div class="skill-head"><span class="serif-num">04</span><h3>리더십 · 커뮤니케이션</h3></div>
+        <p class="skill-sub">함께 일하는 구조를 먼저 만듭니다</p>
+        <ul>
+          <li>6인 캡스톤 팀 대표 — 역할 분담과 마감 일정 관리</li>
+          <li>기업 영상팀과의 메일 커뮤니케이션 담당</li>
+          <li>경영정보론 팀 발표에서 발표자 역할</li>
+        </ul>
+        <div class="proof">근거
+          <button class="link-btn" type="button" data-project="pfeel" aria-haspopup="dialog">퓔 숏폼</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="tools">
+      <h3>다뤄 본 도구</h3>
+      <ul class="tool-list">
+        <li>Suno</li><li>Kling</li><li>Seedance</li><li>생성형 AI 프롬프트</li>
+        <li>HTML · CSS · JavaScript</li><li>WebGPU 3D 실험</li><li>스프레드시트</li><li>숏폼 편집</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 04. 활동 기록 ===================== -->
+<section class="section section-tint" id="activity" aria-labelledby="activityTitle">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="kicker"><span class="serif-num">04</span>Activity</p>
+        <h2 class="section-title" id="activityTitle">활동 기록</h2>
+      </div>
+      <p class="section-desc">최근 활동부터 차례로 정리했습니다.</p>
+    </div>
+
+    <dl class="stats">
+      <div><dt>인턴</dt><dd>1<small>회</small></dd></div>
+      <div><dt>대회</dt><dd>1<small>회</small></dd></div>
+      <div><dt>산학협력</dt><dd>1<small>건</small></dd></div>
+      <div><dt>이끈 팀</dt><dd>6<small>인</small></dd></div>
+    </dl>
+
+    <ol class="log">
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026 하반기</span><span class="log-type">교내 행사</span></div>
+        <div class="log-main">
+          <h3 class="log-title">디지털콘텐츠 이노베이션 페스티벌 출품 준비</h3>
+          <p class="log-org">가톨릭대학교 미디어기술콘텐츠학과</p>
+          <p class="log-desc">AI 애니메이션 뮤직비디오 'Empty'로 참가 신청을 준비하고 있습니다.</p>
+          <button class="link-btn" type="button" data-project="empty" aria-haspopup="dialog">프로젝트 01 보기</button>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026.11</span><span class="log-type">수업</span></div>
+        <div class="log-main">
+          <h3 class="log-title">경영정보론 팀 발표 「생성형 AI 활용 사례: 아마존」</h3>
+          <p class="log-org">3인 팀 · 발표 담당</p>
+          <p class="log-desc">생성형 AI를 주제로 아마존의 활용 사례를 분석하고, 팀을 대표해 발표를 맡았습니다.</p>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026.09 – 현재</span><span class="log-type">산학협력</span></div>
+        <div class="log-main">
+          <h3 class="log-title">미디어기술콘텐츠캡스톤 1팀 대표</h3>
+          <p class="log-org">화장품 기업 일론(THE iLLON) 산학협력</p>
+          <p class="log-desc">6인 팀을 이끌며 듀플로우·퓔 두 브랜드의 AI 홍보 콘텐츠 기획안을 병행했습니다.</p>
+          <button class="link-btn" type="button" data-project="pfeel" aria-haspopup="dialog">프로젝트 02 보기</button>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026.09</span><span class="log-type">팀 프로젝트</span></div>
+        <div class="log-main">
+          <h3 class="log-title">르떼(Leté) 브랜드 SNS · UGC 분석</h3>
+          <p class="log-org">헤어케어 브랜드 분석 팀 프로젝트</p>
+          <p class="log-desc">인스타그램·UGC를 콘텐츠 유형별로 나눠 지표를 비교하고, 20대 신규 고객 가설과 경쟁 브랜드 선정 기준을 정리했습니다.</p>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026.07 – 08</span><span class="log-type">인턴</span></div>
+        <div class="log-main">
+          <h3 class="log-title">가톨릭대학교 대외협력팀 인턴</h3>
+          <p class="log-org">가톨릭대학교 대외협력팀</p>
+          <p class="log-desc">학교 공식 SNS 콘텐츠와 카드뉴스 제작을 지원하고, 교내외 행사의 사진·영상 촬영을 도왔습니다.</p>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">2026.05</span><span class="log-type">대회</span></div>
+        <div class="log-main">
+          <h3 class="log-title">부천 캠퍼스 컵 홍보 챌린지 참가</h3>
+          <p class="log-org">부천 지역 대학생 홍보 챌린지</p>
+          <p class="log-desc">세로형 숏폼과 참여 가이드 카드뉴스로 SNS 참여형 홍보를 기획했습니다.</p>
+          <button class="link-btn" type="button" data-project="campus" aria-haspopup="dialog">프로젝트 03 보기</button>
+        </div>
+      </li>
+      <li class="log-item">
+        <div class="log-side"><span class="log-date">재학 중</span><span class="log-type">학력</span></div>
+        <div class="log-main">
+          <h3 class="log-title">가톨릭대학교 미디어기술콘텐츠학과</h3>
+          <p class="log-org">경기도 부천시</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 05. 연락처 ===================== -->
+<section class="section section-dark contact" id="contact" aria-labelledby="contactTitle">
+  <div class="container">
+    <p class="kicker"><span class="serif-num">05</span>Contact</p>
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-title" id="contactTitle">함께 만들 <strong>첫 장면</strong>이 있다면,<br>편하게 연락 주세요.</h2>
+        <a class="contact-mail" href="mailto:Hakseong@gmail.com">
+          Hakseong@gmail.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="mailto:Hakseong@gmail.com?subject=%5B%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%5D%20%EC%9E%A5%ED%95%99%EC%84%B1%20%EB%8B%98%EA%BB%98%20%EC%97%B0%EB%9D%BD%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4">메일 보내기</a>
+          <button class="btn btn-line-light" id="copyEmail" type="button" data-email="Hakseong@gmail.com">주소 복사</button>
+        </div>
+        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+      </div>
+      <dl class="contact-info">
+        <div><dt>이름</dt><dd>장학성</dd></div>
+        <div><dt>소속</dt><dd>가톨릭대학교 미디어기술콘텐츠학과</dd></div>
+        <div><dt>지원</dt><dd>CJ ENM 엔터테인먼트부문</dd></div>
+        <div><dt>이메일</dt><dd>Hakseong@gmail.com</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 장학성 — Content Creator</span>
+    <a href="#about">맨 위로 ↑</a>
+  </div>
+</footer>
+
+<!-- ===================== 프로젝트 상세 보기 ===================== -->
+<dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle">
+  <div class="dialog-bar">
+    <span class="dialog-count" id="dialogCount"><span class="serif-num">01</span> / 03 Project</span>
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="상세 보기 닫기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="dialog-body" id="dialogBody"></div>
+  <div class="dialog-nav">
+    <button class="btn btn-line btn-sm" type="button" data-dialog-nav="-1">← 이전 프로젝트</button>
+    <button class="btn btn-line btn-sm" type="button" data-dialog-nav="1">다음 프로젝트 →</button>
+  </div>
+</dialog>
+
+<template id="detail-empty">
+  <p class="dialog-kicker">개인 작품 · 음악 + 영상</p>
+  <h3 class="dialog-title" id="dialogTitle">'Empty' AI 애니메이션 뮤직비디오</h3>
+  <p class="dialog-lead">화가를 꿈꿨지만 현실의 벽에 막혀 평범해진 3년 차 영업부 대리가, 창고에서 빈 캔버스와 붓을 다시 마주하며 위로받는 이야기입니다. '공허함(Hollow)'이 끝이 아니라 새로운 시작이 될 수 있다는 메시지를 노래와 영상으로 풀었습니다.</p>
+  <dl class="detail-grid">
+    <div><dt>기간</dt><dd>2026 하반기</dd></div>
+    <div><dt>형태</dt><dd>애니메이션 MV · 3분~3분 30초</dd></div>
+    <div><dt>역할</dt><dd>기획 · 작사 · 스토리보드 · AI 연출</dd></div>
+  </dl>
+  <section class="detail-block">
+    <h4>기획 의도</h4>
+    <p>고단한 하루를 보내는 직장인에게 "비어 있다는 건 다시 채울 수 있다는 뜻"이라는 위로를 건네고 싶었습니다. 그래서 핵심 오브제를 '빈 캔버스'로 정하고, 노래를 먼저 만든 뒤 영상을 음악에 맞춰 설계했습니다.</p>
+  </section>
+  <section class="detail-block">
+    <h4>진행 과정</h4>
+    <ol class="steps">
+      <li><span><strong>노래 먼저</strong> — 참고 곡의 가사 구조와 스타일을 분석해 Suno 입력 방식으로 재구성하고, 영어 가사(한국어 번역 병기)로 노래 'Empty'를 완성했습니다.</span></li>
+      <li><span><strong>28컷 스토리라인</strong> — 어린 시절 수상 장면 → 야근 중 상사의 메시지 진동에 깨는 오프닝 → 엘리베이터·지하철에서 마주치는 어린 자신 → 창고 속 빈 캔버스 → 아버지의 공방 기억 → 함께 완성한 그림으로 마무리했습니다.</span></li>
+      <li><span><strong>색으로 시간 나누기</strong> — 현재는 차가운 푸른빛·무채색·네온, 과거는 따뜻한 노란빛·파스텔·크레파스와 수채화 질감으로 정해 두 시간대가 한눈에 구분되게 했습니다.</span></li>
+      <li><span><strong>도구별 프롬프트 번역</strong> — 컷마다 구도·카메라·조명 의도를 먼저 문서로 정리한 뒤, Kling·Seedance 등 영상 생성 AI의 입력 형식에 맞춰 16:9·1080p 프롬프트로 바꿨습니다.</span></li>
+    </ol>
+  </section>
+  <section class="detail-block">
+    <h4>결과와 배운 점</h4>
+    <ul class="checks">
+      <li>노래 1곡, 28컷 스토리라인, 카메라·연출 단위 스토리보드 구성</li>
+      <li>2026 디지털콘텐츠 이노베이션 페스티벌(학과 주최) 출품 준비</li>
+      <li><strong>배운 점</strong> — AI 도구가 바뀌어도 흔들리지 않는 건 '연출 의도 문서'였습니다. 도구보다 기획서가 먼저라는 걸 확인했습니다.</li>
+    </ul>
+  </section>
+  <section class="detail-block">
+    <h4>사용 도구</h4>
+    <ul class="tags-light"><li>Suno</li><li>Kling</li><li>Seedance</li><li>스토리보드</li></ul>
+  </section>
+</template>
+
+<template id="detail-pfeel">
+  <p class="dialog-kicker">산학협력 · 미디어기술콘텐츠캡스톤</p>
+  <h3 class="dialog-title" id="dialogTitle">일론(THE iLLON) × 퓔(P'FFEEL) AI 홍보 숏폼</h3>
+  <p class="dialog-lead">미디어기술콘텐츠캡스톤 수업에서 화장품 기업 일론과 산학협력으로 진행하는 프로젝트입니다. 1팀 대표로서 팀 운영과 기업 커뮤니케이션을 맡고, 퓔(P'FFEEL) 브랜드의 AI 홍보 숏폼을 기획하고 있습니다.</p>
+  <dl class="detail-grid">
+    <div><dt>기간</dt><dd>2026.09 – 진행 중</dd></div>
+    <div><dt>팀</dt><dd>6명 · 팀 대표</dd></div>
+    <div><dt>역할</dt><dd>팀 운영 · 숏폼 기획</dd></div>
+  </dl>
+  <section class="detail-block">
+    <h4>기획 의도</h4>
+    <p>짧은 영상 안에서 제품을 써 보고 싶게 만드는 것이 목표입니다. 기업이 원하는 방향을 빠르게 맞추기 위해 하나의 답을 고집하기보다 비교할 수 있는 선택지를 준비했습니다.</p>
+  </section>
+  <section class="detail-block">
+    <h4>진행 과정</h4>
+    <ol class="steps">
+      <li><span><strong>브리프 정리</strong> — 기업 영상팀 안내에 따라 듀플로우·퓔 중 한 브랜드를 골라 3장 내외 기획안을 내는 과제 조건과 마감을 팀에 공유했습니다.</span></li>
+      <li><span><strong>두 갈래 병행</strong> — 6명을 3명씩 나눠 두 브랜드 기획안을 동시에 쓰도록 역할을 배분했고, 저는 퓔 팀에서 숏폼 아이디어를 맡았습니다.</span></li>
+      <li><span><strong>선택지 제안</strong> — 두 기획안을 함께 전달하고 기업이 더 적합한 안을 고르도록 요청해, 클라이언트의 판단을 돕는 방식으로 소통했습니다.</span></li>
+      <li><span><strong>제작 (예정)</strong> — 선정된 기획안을 바탕으로 AI 홍보 숏폼을 제작합니다.</span></li>
+    </ol>
+  </section>
+  <section class="detail-block">
+    <h4>결과와 배운 점</h4>
+    <ul class="checks">
+      <li>제출 일정(11월 17일)에 맞춰 두 브랜드의 기획안 준비</li>
+      <li><strong>배운 점</strong> — 팀이 커질수록 '누가, 무엇을, 언제까지'를 먼저 정하는 것이 결과물의 질을 좌우했습니다.</li>
+    </ul>
+  </section>
+  <section class="detail-block">
+    <h4>사용 도구</h4>
+    <ul class="tags-light"><li>숏폼 기획안</li><li>콘티</li><li>생성형 AI</li></ul>
+  </section>
+</template>
+
+<template id="detail-campus">
+  <p class="dialog-kicker">대회 · 홍보 챌린지</p>
+  <h3 class="dialog-title" id="dialogTitle">부천 캠퍼스 컵 홍보 챌린지</h3>
+  <p class="dialog-lead">부천 지역 대학생이 함께하는 '부천 캠퍼스 컵'을 더 많은 학생에게 알리기 위한 홍보 챌린지에 참가했습니다. 게시물을 보고 지나치는 데서 끝나지 않고, 직접 참여하게 만드는 숏폼과 SNS 챌린지를 기획·제작했습니다.</p>
+  <dl class="detail-grid">
+    <div><dt>기간</dt><dd>2026.05</dd></div>
+    <div><dt>형태</dt><dd>팀 참가 · SNS 캠페인</dd></div>
+    <div><dt>역할</dt><dd>콘셉트 기획 · 숏폼 편집</dd></div>
+  </dl>
+  <section class="detail-block">
+    <h4>기획 의도</h4>
+    <p>대학생에게 행사 홍보는 '정보'보다 '같이 하는 재미'로 다가간다고 보고, 누구나 15초 안에 따라 할 수 있는 참여형 포맷을 핵심으로 잡았습니다.</p>
+  </section>
+  <section class="detail-block">
+    <h4>진행 과정</h4>
+    <ol class="steps">
+      <li><span><strong>타깃 이해</strong> — 주변 대학생들이 교내외 행사 소식을 주로 어디서 접하는지 묻고, 숏폼과 SNS를 중심 채널로 정했습니다.</span></li>
+      <li><span><strong>챌린지 포맷</strong> — 15초 안에 따라 할 수 있는 동작과 해시태그를 묶어 참여 장벽을 낮췄습니다.</span></li>
+      <li><span><strong>촬영 · 편집</strong> — 캠퍼스 곳곳에서 세로형으로 촬영해 숏폼으로 편집했습니다.</span></li>
+      <li><span><strong>확산 장치</strong> — 참여 방법을 한 장에 정리한 가이드 카드뉴스를 만들어 영상과 함께 배포했습니다.</span></li>
+    </ol>
+  </section>
+  <section class="detail-block">
+    <h4>결과와 배운 점</h4>
+    <ul class="checks">
+      <li>홍보 영상(YouTube 공개) · 세로형 숏폼 · 참여 가이드 카드뉴스 제작</li>
+      <li><strong>배운 점</strong> — 참여형 콘텐츠는 '첫 장면을 보자마자 따라 할 수 있는가'가 가장 중요했습니다.</li>
+    </ul>
+  </section>
+  <section class="detail-block">
+    <h4>사용 도구</h4>
+    <ul class="tags-light"><li>세로형 촬영</li><li>숏폼 편집</li><li>카드뉴스</li><li>해시태그 기획</li></ul>
+  </section>
+</template>
+
+<script>
+/* =========================================================
+   영상 연결 설정 — 프로젝트와 YouTube 영상을 바꾸려면 여기만 고치면 됩니다.
+   키: empty('Empty' 뮤직비디오) · pfeel(일론×퓔 숏폼) · campus(부천 캠퍼스 컵)
+   ========================================================= */
+var PROJECT_VIDEOS = {
+  empty: {
+    id: 'Vtzuqhcs45I',
+    url: 'https://www.youtube.com/watch?v=Vtzuqhcs45I',
+    poster: 'linear-gradient(110deg, #262D3A 0%, #3D475A 47%, #D29A3A 53%, #E8C47A 100%)'
+  },
+  campus: {
+    id: 'kOpPhYhV5Ns',
+    url: 'https://youtu.be/kOpPhYhV5Ns',
+    poster: 'linear-gradient(135deg, #E6B940 0%, #C98C1E 100%)'
+  }
+};
+
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  root.classList.remove('no-js');
+  root.classList.add('js');
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function onMediaChange(mq, fn) {
+    if (mq.addEventListener) mq.addEventListener('change', fn);
+    else if (mq.addListener) mq.addListener(fn);
+  }
+  var PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+
+  /* -------------------------------------------------------
+     1. 모바일 메뉴
+     ------------------------------------------------------- */
+  var menuBtn = $('#menuToggle');
+  var nav = $('#siteNav');
+  function setMenu(open) {
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    nav.classList.toggle('is-open', open);
+  }
+  menuBtn.addEventListener('click', function () {
+    setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+  });
+  $$('#siteNav a').forEach(function (a) {
+    a.addEventListener('click', function () { setMenu(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); menuBtn.focus(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('is-open') && !e.target.closest('.site-header')) setMenu(false);
+  });
+  onMediaChange(window.matchMedia('(min-width: 761px)'), function (e) { if (e.matches) setMenu(false); });
+
+  /* -------------------------------------------------------
+     2. 현재 보고 있는 섹션을 메뉴에 표시
+     ------------------------------------------------------- */
+  var navLinks = $$('#siteNav a[href^="#"]');
+  if ('IntersectionObserver' in window) {
+    var sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    navLinks.forEach(function (a) {
+      var target = $(a.getAttribute('href'));
+      if (target) sectionObserver.observe(target);
+    });
+  }
+
+  /* -------------------------------------------------------
+     3. 영상이 있는 프로젝트 카드에 표시 + '영상 보기' 버튼
+     ------------------------------------------------------- */
+  $$('[data-project-card]').forEach(function (card) {
+    var id = card.getAttribute('data-project-card');
+    if (!PROJECT_VIDEOS[id]) return;
+    var chip = document.createElement('span');
+    chip.className = 'thumb-chip right';
+    chip.innerHTML = PLAY_ICON + 'Video';
+    $('.project-thumb', card).appendChild(chip);
+    var watch = document.createElement('button');
+    watch.type = 'button';
+    watch.className = 'btn btn-line-light btn-sm';
+    watch.setAttribute('data-project', id);
+    watch.setAttribute('data-play', 'true');
+    watch.setAttribute('aria-haspopup', 'dialog');
+    watch.innerHTML = PLAY_ICON + '영상 보기';
+    $('.project-actions', card).appendChild(watch);
+  });
+
+  /* -------------------------------------------------------
+     4. 프로젝트 상세 보기 (dialog) + 영상 플레이어
+     ------------------------------------------------------- */
+  var dialog = $('#projectDialog');
+  var dialogBody = $('#dialogBody');
+  var dialogCount = $('#dialogCount');
+  var projectOrder = ['empty', 'pfeel', 'campus'];
+  var currentProject = null;
+  var lastOpener = null;
+  var supportsDialog = typeof dialog.showModal === 'function';
+  if (!supportsDialog) root.classList.add('no-dialog');
+
+  function loadPlayer(frame, video, title) {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(video.id) + '?autoplay=1&rel=0&playsinline=1';
+    iframe.title = title + ' — YouTube 영상';
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    frame.innerHTML = '';
+    frame.appendChild(iframe);
+  }
+
+  function buildVideo(video, title) {
+    var wrap = document.createElement('div');
+    wrap.className = 'video-wrap';
+    var frame = document.createElement('div');
+    frame.className = 'video-frame';
+    if (video.poster) frame.style.setProperty('--poster', video.poster);
+    var poster = document.createElement('button');
+    poster.type = 'button';
+    poster.className = 'video-poster';
+    poster.setAttribute('aria-label', title + ' 영상 재생');
+    poster.innerHTML =
+      '<span class="video-play">' + PLAY_ICON + '</span>' +
+      '<span class="video-label">영상 재생</span>' +
+      '<span class="video-sub">누르면 이 자리에서 YouTube 플레이어가 열립니다</span>';
+    poster.addEventListener('click', function () { loadPlayer(frame, video, title); });
+    frame.appendChild(poster);
+
+    var meta = document.createElement('p');
+    meta.className = 'video-meta';
+    var note = document.createElement('span');
+    note.textContent = location.protocol === 'file:'
+      ? '내 컴퓨터에서 파일로 열면 재생이 막힐 수 있어요. GitHub Pages에 올리면 바로 재생됩니다.'
+      : 'YouTube 영상';
+    var link = document.createElement('a');
+    link.href = video.url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'YouTube에서 보기 ↗';
+    meta.appendChild(note);
+    meta.appendChild(link);
+
+    wrap.appendChild(frame);
+    wrap.appendChild(meta);
+    return { wrap: wrap, frame: frame };
+  }
+
+  function renderProject(id, playNow) {
+    var tpl = document.getElementById('detail-' + id);
+    if (!tpl) return false;
+    dialogBody.innerHTML = '';
+    dialogBody.appendChild(tpl.content.cloneNode(true));
+    currentProject = id;
+
+    var video = PROJECT_VIDEOS[id];
+    if (video) {
+      var title = ($('.dialog-title', dialogBody) || {}).textContent || '프로젝트';
+      var built = buildVideo(video, title);
+      var lead = $('.dialog-lead', dialogBody);
+      if (lead && lead.nextSibling) dialogBody.insertBefore(built.wrap, lead.nextSibling);
+      else dialogBody.appendChild(built.wrap);
+      if (playNow) loadPlayer(built.frame, video, title);
+    }
+
+    var index = projectOrder.indexOf(id);
+    dialogCount.innerHTML = '<span class="serif-num">0' + (index + 1) + '</span> / 0' + projectOrder.length + ' Project';
+    dialog.scrollTop = 0;
+    return true;
+  }
+  function openProject(id, opener, playNow) {
+    if (!renderProject(id, playNow)) return;
+    if (opener) lastOpener = opener;
+    if (!dialog.open) {
+      if (supportsDialog) dialog.showModal();
+      else dialog.setAttribute('open', '');
+    }
+    root.classList.add('is-modal-open');
+    $('#dialogClose').focus();
+  }
+  function closeProject() {
+    if (supportsDialog) { if (dialog.open) dialog.close(); }
+    else { dialog.removeAttribute('open'); onDialogClosed(); }
+  }
+  function onDialogClosed() {
+    dialogBody.innerHTML = ''; /* 닫으면 영상 재생도 함께 멈춤 */
+    root.classList.remove('is-modal-open');
+    if (lastOpener && document.contains(lastOpener)) lastOpener.focus();
+  }
+  dialog.addEventListener('close', onDialogClosed);
+  $('#dialogClose').addEventListener('click', closeProject);
+  dialog.addEventListener('click', function (e) {
+    if (e.target === dialog) closeProject(); /* 바깥 어두운 영역 클릭 */
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!supportsDialog && e.key === 'Escape' && dialog.hasAttribute('open')) closeProject();
+  });
+  $$('[data-dialog-nav]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var step = Number(btn.getAttribute('data-dialog-nav'));
+      var i = projectOrder.indexOf(currentProject);
+      renderProject(projectOrder[(i + step + projectOrder.length) % projectOrder.length], false);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('[data-project]');
+    if (!trigger) return;
+    openProject(trigger.getAttribute('data-project'), trigger, trigger.getAttribute('data-play') === 'true');
+  });
+
+  /* -------------------------------------------------------
+     5. 이메일 주소 복사
+     ------------------------------------------------------- */
+  var copyBtn = $('#copyEmail');
+  var copyStatus = $('#copyStatus');
+  copyBtn.addEventListener('click', function () {
+    var text = copyBtn.getAttribute('data-email');
+    function done(ok) {
+      copyStatus.textContent = ok ? '이메일 주소를 복사했어요 — ' + text : '복사하지 못했어요. 위 주소를 직접 선택해 주세요.';
+    }
+    function fallback() {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        done(ok);
+      } catch (err) { done(false); }
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    } else {
+      fallback();
+    }
+  });
+
+  /* -------------------------------------------------------
+     6. 영상 작업실(.scene-motion) 움직임
+        - 약 5초 주기로 위아래 10px 떠 있기
+        - PC 마우스 추적: 조금 이동 + 기울기 최대 6도
+        - 스크롤: 위로 최대 40px
+        - requestAnimationFrame 시간 값(now)으로 부드럽게 보간
+        - 터치 기기: 마우스 추적 끔 / 멈춤 버튼 / prefers-reduced-motion / 숨은 탭 정지
+     ------------------------------------------------------- */
+  (function sceneMotion() {
+    var el = $('.scene-motion');
+    var stage = $('.scene-stage');
+    var btn = $('#motionToggle');
+    var label = btn ? $('.motion-label', btn) : null;
+    var statusEl = $('#motionStatus');
+    if (!el || !btn) return;
+
+    var CONFIG = {
+      floatPeriod: 5000, // ms, 떠 있는 한 주기
+      floatRange: 10,    // px, 위아래 이동 폭
+      scrollMax: 40,     // px, 스크롤 시 위로 최대 이동
+      scrollRatio: 0.12, // 스크롤 1px당 이동 비율
+      moveX: 14,         // px, 마우스 추적 가로 이동
+      moveY: 8,          // px, 마우스 추적 세로 이동
+      tiltMax: 6,        // deg, 기울기 최대값
+      smoothing: 180,    // ms, 클수록 더 천천히 따라옴
+      perspective: 900   // px
+    };
+
+    var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var fineMQ = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    var enabled = !reduceMQ.matches;
+    var stoppedBy = reduceMQ.matches ? 'system' : null; // 'user' | 'system' | null
+    var pageVisible = document.visibilityState !== 'hidden';
+    var inView = true;
+    var pointerTracking = fineMQ.matches;
+
+    var rafId = 0;
+    var lastTime = 0;
+    var elapsed = 0; // 보이는 동안만 쌓이는 시간 → 탭을 다시 열어도 위치가 튀지 않음
+    var target = { x: 0, y: 0, rx: 0, ry: 0 };
+    var current = { x: 0, y: 0, rx: 0, ry: 0, scroll: 0 };
+
+    function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
+
+    function setPointerTarget(clientX, clientY) {
+      var nx = clamp(clientX / window.innerWidth * 2 - 1, -1, 1);
+      var ny = clamp(clientY / window.innerHeight * 2 - 1, -1, 1);
+      target.x = nx * CONFIG.moveX;
+      target.y = ny * CONFIG.moveY;
+      var rx = -ny * CONFIG.tiltMax;
+      var ry = nx * CONFIG.tiltMax;
+      var mag = Math.sqrt(rx * rx + ry * ry);
+      if (mag > CONFIG.tiltMax) { // 대각선에서도 전체 기울기가 6도를 넘지 않게
+        rx = rx / mag * CONFIG.tiltMax;
+        ry = ry / mag * CONFIG.tiltMax;
+      }
+      target.rx = rx;
+      target.ry = ry;
+    }
+    function resetPointerTarget() { target.x = 0; target.y = 0; target.rx = 0; target.ry = 0; }
+
+    window.addEventListener('pointermove', function (e) {
+      if (!pointerTracking || e.pointerType !== 'mouse') return;
+      setPointerTarget(e.clientX, e.clientY);
+    }, { passive: true });
+    window.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') resetPointerTarget(); // 터치·펜 입력은 추적하지 않음
+    }, { passive: true });
+    root.addEventListener('mouseleave', resetPointerTarget);
+    window.addEventListener('blur', resetPointerTarget);
+    onMediaChange(fineMQ, function (e) {
+      pointerTracking = e.matches;
+      if (!pointerTracking) resetPointerTarget();
+    });
+
+    function frame(now) {
+      var dt = lastTime ? Math.min(now - lastTime, 50) : 16.7;
+      lastTime = now;
+      elapsed += dt;
+
+      // 프레임 속도와 무관한 지수 보간
+      var k = 1 - Math.exp(-dt / CONFIG.smoothing);
+      var scrollY = window.pageYOffset || root.scrollTop || 0;
+      var scrollTarget = -Math.min(CONFIG.scrollMax, Math.max(0, scrollY) * CONFIG.scrollRatio);
+
+      current.x += (target.x - current.x) * k;
+      current.y += (target.y - current.y) * k;
+      current.rx += (target.rx - current.rx) * k;
+      current.ry += (target.ry - current.ry) * k;
+      current.scroll += (scrollTarget - current.scroll) * k;
+
+      // 반올림 오차까지 고려해 기울기를 6도 안으로 한 번 더 제한
+      var tilt = Math.sqrt(current.rx * current.rx + current.ry * current.ry);
+      var tiltLimit = CONFIG.tiltMax - 0.01;
+      if (tilt > tiltLimit) {
+        current.rx *= tiltLimit / tilt;
+        current.ry *= tiltLimit / tilt;
+      }
+
+      // 0 → -10px → 0 을 5초 동안 부드럽게 (코사인 곡선)
+      var phase = (elapsed % CONFIG.floatPeriod) / CONFIG.floatPeriod;
+      var floatY = -CONFIG.floatRange * (0.5 - 0.5 * Math.cos(phase * Math.PI * 2));
+
+      var tx = current.x;
+      var ty = current.y + current.scroll + floatY;
+      el.style.transform =
+        'perspective(' + CONFIG.perspective + 'px) ' +
+        'translate3d(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px,0) ' +
+        'rotateX(' + current.rx.toFixed(2) + 'deg) rotateY(' + current.ry.toFixed(2) + 'deg)';
+
+      rafId = window.requestAnimationFrame(frame);
+    }
+
+    function startLoop() {
+      if (rafId) return;
+      lastTime = 0;
+      rafId = window.requestAnimationFrame(frame);
+    }
+    function stopLoop() {
+      if (!rafId) return;
+      window.cancelAnimationFrame(rafId);
+      rafId = 0;
+    }
+    function resetPose() {
+      el.style.transform = '';
+      current.x = current.y = current.rx = current.ry = current.scroll = 0;
+      elapsed = 0;
+    }
+
+    var lastStatus = '';
+    function update() {
+      if (!enabled) { stopLoop(); resetPose(); }
+      else if (pageVisible && inView) startLoop();
+      else stopLoop(); // 숨은 탭·화면 밖에서는 계산하지 않음
+
+      var state = !enabled ? (stoppedBy === 'system' ? 'reduced' : 'paused')
+        : !pageVisible ? 'hidden'
+        : !inView ? 'offscreen'
+        : 'running';
+      el.setAttribute('data-motion', state);
+
+      btn.setAttribute('data-state', enabled ? 'running' : 'stopped');
+      label.textContent = enabled ? '움직임 멈춤' : '움직임 재생';
+
+      var message = enabled
+        ? '작업실이 천천히 떠 있어요.'
+        : stoppedBy === 'system'
+          ? "기기의 '동작 줄이기' 설정에 따라 멈춰 있어요. 재생 버튼으로 켤 수 있어요."
+          : '움직임을 멈췄어요.';
+      if (message !== lastStatus) { statusEl.textContent = message; lastStatus = message; }
+    }
+
+    btn.addEventListener('click', function () {
+      enabled = !enabled;
+      stoppedBy = enabled ? null : 'user';
+      update();
+    });
+    onMediaChange(reduceMQ, function (e) {
+      if (e.matches) { enabled = false; stoppedBy = 'system'; }
+      else if (stoppedBy === 'system') { enabled = true; stoppedBy = null; }
+      update();
+    });
+    document.addEventListener('visibilitychange', function () {
+      pageVisible = document.visibilityState !== 'hidden';
+      update();
+    });
+    if ('IntersectionObserver' in window && stage) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[entries.length - 1].isIntersecting;
+        update();
+      }, { rootMargin: '120px 0px' }).observe(stage);
+    }
+
+    update();
+  })();
+})();
+</script>
+</body>
+</html>
